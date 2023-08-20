@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto Mono' ,monospace;
+    background-color: #FDF9F3;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Main section */
+main {
+    /* border: 2px solid #2C292D; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+#calculator {
+    border: 2px solid #2C292D;
+    width: 500px;
+    height: 600px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#display {
+    border: 2px solid #2C292D;
+    width: 85%;
+    height: 100px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+#buttons-container {
+    border: 2px solid #2C292D;
+    width: 85%;
+    height: 400px;
+}
+
+
+/* Footer Section */
+footer {
+    /* border: 2px solid #2C292D; */
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer p {
+    margin-right: 10px;
+}
+
+footer img{
+    width: 20px;
+}
