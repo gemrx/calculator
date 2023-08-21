@@ -22,30 +22,128 @@ main {
     align-items: center;
     flex: 1;
 }
-
 #calculator {
     border: 2px solid #2C292D;
-    width: 500px;
+    width: 400px;
     height: 600px;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    box-shadow: 1.5px 3px 3px hsl(0deg 0% 0% / 0.45);
 }
 
+/* Display section */
 #display {
     border: 2px solid #2C292D;
-    width: 85%;
+    width: 80%;
     height: 100px;
     border-radius: 8px;
     margin-bottom: 30px;
+    background-color:#E0E0E0;
+    box-shadow: 1px 2px 2px hsl(0deg 0% 0% / 0.45) inset;
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
 }
 
+.input {
+    /* border: 2px solid black; */
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    color: #2C292D;
+    font-size: 20px;
+}
+
+.handler {
+    /* border: 2px solid black; */
+    flex: 1;
+    display: flex;
+}
+.error {
+    /* border: 2px solid violet; */
+    flex: 2;
+    display: flex;
+    align-items: flex-end;
+    color: #2C292D;
+    font-size: 24px;
+}
+.result {
+    /* border: 2px solid orange; */
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    color: #2C292D;
+    font-size: 24px;
+}
+
+
+.current {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    color: #2C292D;
+    font-size: 22px;
+}
+
+
+/* Buttons section */
 #buttons-container {
-    border: 2px solid #2C292D;
-    width: 85%;
+    /* border: 2px solid #2C292D; */
+    width: 80%;
     height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.button-row {
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: space-between;
+}
+
+.button {
+    border: 2px solid #2C292D;
+    border-radius: 8px;
+    width: 75px;
+    height: 75px;
+    color: #2C292D;
+    font-size: 18px;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 1px 2px 2px hsl(0deg 0% 0% / 0.45);
+    transition: transform 0.2s ease;
+}
+.button:active {
+    transform: scale(0.9); /* Scale down by 10% on click */
+    box-shadow: 0.5px 1px 1px hsl(0deg 0% 0% / 0.55);
+
+}
+.button.ac, 
+.button.del {
+    background-color: #FF6188;
+    color: #FDF9F3;
+}
+.button.equal {
+    background-color: #FF6188;
+    color: #FDF9F3;
+    width: 155px;
+    height: 75px;
+}
+.button.percentage,
+.button.plus,
+.button.multiplication,
+.button.division,
+.button.minus {
+    background-color: #78b0e8;
+    color: #FDF9F3;
 }
 
 
