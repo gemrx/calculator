@@ -21,12 +21,16 @@ main {
     justify-content: center;
     align-items: center;
     flex: 1;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
-#calculator {
+.calculator {
     border: 2px solid #2C292D;
     width: 400px;
-    height: 600px;
+    min-height: 600px;
     border-radius: 20px;
+    padding-top: 30px;
+    padding-bottom: 30px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -35,10 +39,10 @@ main {
 }
 
 /* Display section */
-#display {
+.screen {
     border: 2px solid #2C292D;
     width: 80%;
-    height: 100px;
+    min-height: 100px;
     border-radius: 8px;
     margin-bottom: 30px;
     background-color:#E0E0E0;
@@ -46,6 +50,10 @@ main {
     display: flex;
     flex-direction: column;
     padding: 8px;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-all;
+    white-space: normal;
 }
 
 .input {
@@ -53,8 +61,9 @@ main {
     flex: 1;
     display: flex;
     justify-content: flex-end;
+    text-align: right;
     color: #2C292D;
-    font-size: 20px;
+    font-size: 22px;
 }
 
 .handler {
@@ -68,16 +77,16 @@ main {
     display: flex;
     align-items: flex-end;
     color: #2C292D;
-    font-size: 24px;
+    font-size: 22px;
 }
-.result {
+.output {
     /* border: 2px solid orange; */
     flex: 1;
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
     color: #2C292D;
-    font-size: 24px;
+    font-size: 22px;
 }
 
 
@@ -92,10 +101,10 @@ main {
 
 
 /* Buttons section */
-#buttons-container {
+.buttons-container {
     /* border: 2px solid #2C292D; */
     width: 80%;
-    height: 400px;
+    min-height: 400px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -120,14 +129,18 @@ main {
     align-items: center;
     box-shadow: 1px 2px 2px hsl(0deg 0% 0% / 0.45);
     transition: transform 0.2s ease;
+    cursor: pointer;
 }
+
 .button:active {
     transform: scale(0.9); /* Scale down by 10% on click */
     box-shadow: 0.5px 1px 1px hsl(0deg 0% 0% / 0.55);
 
 }
-.button.ac, 
-.button.del {
+
+.button.clear, 
+.button.delete,
+.button.mod {
     background-color: #FF6188;
     color: #FDF9F3;
 }
@@ -137,10 +150,7 @@ main {
     width: 155px;
     height: 75px;
 }
-.button.percentage,
-.button.plus,
-.button.multiplication,
-.button.division,
+.button.operator,
 .button.minus {
     background-color: #78b0e8;
     color: #FDF9F3;
